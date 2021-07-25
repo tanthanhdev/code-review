@@ -13,28 +13,7 @@ import java.util.Set;
  * @author dell
  */
 public class TinhToan extends javax.swing.JFrame {
-    double a,b;
-    /** 
-     * Creates new form TinhToan
-     */
-    public TinhToan() {
-        initComponents();
-        setLocationRelativeTo(null);
-        
-        RaBtn_cong.setSelected(true);
-        if(Radientichhcn.isSelected()||Radientichhcn.isSelected()){
-                jLabel2.setText("Chiều rộng");
-                jLabel3.setText("Chiều dài");
-        }
-    }
-//        Hàm kiểm tra rỗng
-        public boolean kiemtrarong(){
-            if(txtA.getText()=="" || txtB.getText()==""){
-                return false;
-            }
-            return true;
-        }
-
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,75 +24,7 @@ public class TinhToan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        btnGR = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtA = new javax.swing.JTextField();
-        txtB = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtKQ = new javax.swing.JTextField();
-        RaBtn_tru = new javax.swing.JRadioButton();
-        RaBtn_cong = new javax.swing.JRadioButton();
-        RaBtn_nhan = new javax.swing.JRadioButton();
-        RaBtn_chia = new javax.swing.JRadioButton();
-        Rachuvi = new javax.swing.JRadioButton();
-        Radientichhcn = new javax.swing.JRadioButton();
-        Radientichhv = new javax.swing.JRadioButton();
-        btnTinh = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-
-        jRadioButtonMenuItem1.setSelected(true);
-        jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("TÍNH");
-
-        jLabel2.setText("A");
-
-        jLabel3.setText("B");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 102, 51));
-        jLabel4.setText("Kết quả");
-
-        btnGR.add(RaBtn_tru);
-        RaBtn_tru.setText("Trừ");
-
-        btnGR.add(RaBtn_cong);
-        RaBtn_cong.setText("Cộng");
-
-        btnGR.add(RaBtn_nhan);
-        RaBtn_nhan.setText("Nhân");
-
-        btnGR.add(RaBtn_chia);
-        RaBtn_chia.setText("Chia");
-
-        btnGR.add(Rachuvi);
-        Rachuvi.setText("Chu vi HCN");
-
-        btnGR.add(Radientichhcn);
-        Radientichhcn.setText("Diện tích HCN");
-
-        btnGR.add(Radientichhv);
-        Radientichhv.setText("Diện tích HV");
-
-        btnTinh.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        btnTinh.setText("Tính");
-        btnTinh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTinhActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("CANCEL");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+       
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -219,42 +130,7 @@ public class TinhToan extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void btnTinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTinhActionPerformed
-        // TODO add your handling code here:
-        if(kiemtrarong()){
-            a=Double.parseDouble(txtA.getText());
-            b=Double.parseDouble(txtB.getText());
-            if(RaBtn_cong.isSelected()){
-                
-                txtKQ.setText(""+(a+b));
-            }
-            else if(RaBtn_tru.isSelected()){
-               
-                txtKQ.setText(""+(a-b));
-            }
-            else if(RaBtn_nhan.isSelected()){
-                
-                txtKQ.setText(""+(a*b));
-            }
-            else if(RaBtn_chia.isSelected()){
-                txtKQ.setText(""+(a/b));
-            }
-            else if(Rachuvi.isSelected()){
-                
-                txtKQ.setText(""+((a*b)*2));
-            }
-            else if(Radientichhcn.isSelected()){
-                
-                txtKQ.setText(""+(a*b));
-            }
-            else if(Radientichhv.isSelected()){
-                jLabel2.setText("Cạnh");
-                jLabel3.setText("Cạnh");
-                 txtKQ.setText(""+(a*a));
-            }
-            
-        }
-    }//GEN-LAST:event_btnTinhActionPerformed
+  
 
     /**
      * @param args the command line arguments
